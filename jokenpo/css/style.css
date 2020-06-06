@@ -1,0 +1,253 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #81cdff;
+  justify-content: center;
+  align-items: center;
+  font: 100% verdana, arial, tahoma, sans-serif;
+}
+
+.estiloFonteH1{
+  font-size: 2rem;
+  color: #fffdfc;
+}
+
+.estiloFonteH4{
+  font-size: 1.25rem;
+  color: #fffdfc;
+}
+
+@media screen and (max-width: 980px) {
+  .estiloFonteH4, .estiloFonteH1{
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  .estiloFonteH4, .estiloFonteH1{
+    font-size: 0.6rem;
+  }
+}
+
+.main {
+  width: 100%; 
+  max-width: 1366px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperVencedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 10rem;
+
+}
+
+.painelVencedor{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 3rem;
+  background-color: #0099ff;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+
+}
+
+.contadorVencedor{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  height: 5rem;
+  background-color: #0099ff;
+  border-radius: 7px;
+}
+
+@media screen and (max-height: 640px) {
+  .contadorVencedor, .wrapperVencedor{
+    height: 2.5rem;
+  }
+}
+
+.wrapperJogadores{
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 5rem;
+}
+
+.pontosJog{
+  display: flex;
+  background-color: #fff;
+  width: 15%;
+  height: 4.5rem;
+  border-radius: 7px;
+  justify-content: center;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3.5rem;
+  color: #0099ff;
+}
+
+@media screen and (max-height: 640px) {
+  .pontosJog {
+    height: 2.0rem;
+    font-size: 1.5rem;
+  }
+}
+
+.painelRespostas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 70%;
+  margin-top: 1%;
+  
+}
+
+.wrapperRespostas{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 20rem;
+  margin-top: 1%;
+
+}
+
+
+.painelEsq{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 15%;
+  height: 18rem;
+  margin-right: 1em;
+
+
+}
+
+.painelCentral{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 18rem;
+  border-radius: 7px;
+  background-color: #0099ff;
+}
+
+.painelDir{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 15%;
+  height: 18rem;
+  margin-left: 1em;
+}
+
+@media screen and (max-height: 640px) {
+  .painelDir, .painelEsq, .painelCentral, .wrapperRespostas{
+    height: 10rem;
+  }
+}
+
+
+
+.btnEscolha{
+  border: none;
+  border-radius: 7px;
+  width: 65%;
+  height: 2em;
+  background-color: #0099ff;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.btnEscolha:hover{
+  background-color: #15a0fd;
+}
+
+.btnInicioReset{
+  border: none;
+  border-radius: 7px;
+  width: 30%;
+  height: 2em;
+  background-color: #0099ff;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.btnInicioReset:hover{
+  background-color: #15a0fd;
+}
+
+.ativar-bot{
+  border: none;
+  border-radius: 7px;
+  width: 30%;
+  height: 2em;
+  background-color: #0099ff;
+  cursor: pointer;
+  transition-duration: 300ms;
+
+}
+
+.ativar-bot{
+  background-color: #15a0fd;
+
+}
+
+
+.imgEscolhida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 15rem;
+  border-radius: 7px;
+  background-color: #fff;
+
+}
+
+@media screen and (max-height: 640px) {
+  .imgEscolhida{
+    height: 9rem;
+  }
+}
+
+.painelIniciar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 32%;
+  height: 3rem;
+
+}
+
+@media screen and (max-height: 640px) {
+  .painelIniciar{
+    height: 2rem;
+  }
+}
+
+.imagemSelecionada{
+  width: 7rem;
+  height: 7rem;
+}
+
+.botao-desativado{
+  background-color: #F37373;
+
+}
