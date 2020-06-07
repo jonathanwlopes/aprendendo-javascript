@@ -1,0 +1,48 @@
+{% extends "layout.njk" %}
+{% block title %}
+  <title>Aulas - Movies</title>
+{% endblock %}
+{% block content %}
+
+  <div id="wrapper-content">
+    <h1>Vídeos</h1>
+  </div>
+
+  <section class="cards">
+
+    {% for item in items %}
+      <div class="{{item.card}} card-style" id="{{item.id}}">
+        <div class="card-image-container {{'wrapper-featured' if item.featured }}">
+          <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de: {{item.title}}"/>
+          {%if item.featured %}
+          <div class="featured">Destaque</div>
+          {% endif %}
+        </div>
+        <div class="card-content">
+          <h3>{{item.title}}</h3>
+          <p>
+            {{item.description}}
+          </p>
+        </div>
+        <div class="card-info">
+          <p>{{item.duration}}</p>
+          <p class="card-price">{{item.price}}</p>
+        </div>
+      </div>
+    {% endfor %}
+
+  </section>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <a class="close-modal">
+        <i class="far fa-times-circle fa-2x"></i>
+      </a>
+      <div class="modal-content">
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+{% endblock %}
