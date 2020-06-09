@@ -13,9 +13,14 @@ const $square08 = document.querySelector(".square08");
 const $square09 = document.querySelector(".square09");
 const $historyList = document.querySelector(".history-list");
 const $playButton = document.querySelector(".play-button");
+const $scorePlayer1 = document.querySelector(".score-player1");
+const $scorePlayer2 = document.querySelector(".score-player2");
+const $scorePlayer = document.querySelector(".score-player");
 
 let plays = ["", "", "", "", "", "", "", "", ""];
 let play = "x";
+let scorePlayer1 = 0;
+let scorePlayer2 = 0;
 
 function getPlay() {
   return play;
@@ -219,6 +224,7 @@ function handleClickSquare09() {
   }
 }
 
+
 function checkWinner() {
   let line123 = [plays[0], plays[1], plays[2]];
   let line456 = [plays[3], plays[4], plays[5]];
@@ -229,72 +235,106 @@ function checkWinner() {
   let line258 = [plays[1], plays[4], plays[7]];
   let line369 = [plays[2], plays[5], plays[8]];
 
-
   if (
     line123[0] === getPlay() &&
     line123[1] === getPlay() &&
     line123[2] === getPlay()
   ) {
     console.log("Winner", getPlay());
-  }
-  if (
+    scoreWinner();
+  } else if (
     line456[0] === getPlay() &&
     line456[1] === getPlay() &&
     line456[2] === getPlay()
   ) {
     console.log("Winner", getPlay());
-  }
-  if (
+    scoreWinner();
+  } else if (
     line789[0] === getPlay() &&
-    line789[1] === getPlay &&
+    line789[1] === getPlay() &&
     line789[2] === getPlay()
   ) {
+    scoreWinner();
     console.log("Winner", getPlay());
-  }
-  if (
+  } else if (
     line159[0] === getPlay() &&
     line159[1] === getPlay() &&
     line159[2] === getPlay()
   ) {
+    scoreWinner();
     console.log("Winner", getPlay());
-  }
-  if (
+  } else if (
     line357[0] === getPlay() &&
     line357[1] === getPlay() &&
     line357[2] === getPlay()
   ) {
+    scoreWinner();
     console.log("Winner", getPlay());
-  }
-  if (
+  } else if (
     line147[0] === getPlay() &&
     line147[1] === getPlay() &&
     line147[2] === getPlay()
   ) {
+    scoreWinner();
     console.log("Winner", getPlay());
-  }
-  if (
+  } else if (
     line258[0] === getPlay() &&
     line258[1] === getPlay() &&
-    line258[2] === getPlay() 
+    line258[2] === getPlay()
   ) {
+    scoreWinner();
     console.log("Winner", getPlay());
-  }
-  if (
+  } else if (
     line369[0] === getPlay() &&
     line369[1] === getPlay() &&
     line369[2] === getPlay()
   ) {
+    scoreWinner();
     console.log("Winner", getPlay());
-  } 
-
+  } else if (checkDraw() === true) {
+    scoreWinner();
+    console.log("Empatou");
+  }
 }
 
-function checkDraw(){
-
+function checkDraw() {
+  if (
+    plays[0] !== "" &&
+    plays[1] !== "" &&
+    plays[2] !== "" &&
+    plays[3] !== "" &&
+    plays[4] !== "" &&
+    plays[5] !== "" &&
+    plays[6] !== "" &&
+    plays[7] !== "" &&
+    plays[8] !== ""
+  ) {
+    return true;
+  }
+  return false;
 }
 
 function handleStart() {
-  checkDraw();
+  scoreWinner();
+}
+
+function scoreWinner() {
+  if (checkDraw() === true) {
+    scorePlayer1 += 1;
+    $scorePlayer1.textContent = `0${scorePlayer1}`;
+    scorePlayer2 += 1;
+    $scorePlayer2.textContent = `0${scorePlayer2}`;
+  }
+
+  if (getPlay() === "x") {
+    scorePlayer1 += 1;
+    $scorePlayer.textContent = `Venceu o Jogador 1`;
+    $scorePlayer1.textContent = `0${scorePlayer1}`;
+  } else if (getPlay() === "o") {
+    scorePlayer2 += 1;
+    $scorePlayer.textContent = `Venceu o Jogador 2`;
+    $scorePlayer2.textContent = `0${scorePlayer2}`;
+  }
 }
 
 $playButton.addEventListener("click", handleStart);
