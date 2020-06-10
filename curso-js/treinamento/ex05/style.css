@@ -24,3 +24,14 @@ footer{
 text-align: center;
 font-style: italic;
 }
+
+.resultado{
+  width: 300px;
+  height: 200px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.resultado ul{
+  list-style-type: none; 
+}
