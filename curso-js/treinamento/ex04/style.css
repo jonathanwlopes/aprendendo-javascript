@@ -24,3 +24,9 @@ footer{
 text-align: center;
 font-style: italic;
 }
+
+.txt-resultado{
+  margin: 0px;
+  width: 491px;
+  height: 196px;
+}

@@ -14,6 +14,7 @@ function calcular(){
     for(i=0; i <= 10; i++){
       let item = document.createElement('option')
       item.text = `${valorInicial} x ${i} = ${valorFinal}`
+      item.className = "teste"
       $resultado.appendChild(item)
       valorFinal = valorInicial * i
     }
