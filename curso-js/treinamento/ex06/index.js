@@ -32,22 +32,32 @@ function adicionar(){
 }
 
 function finalizar(){
-  $contentFinalizar.appendChild(divFinalizar)
-  const paragrafo1 = document.createElement('p')
-  paragrafo1.textContent = `Ao todo temos ${bancoNumeros.length}`
-  divFinalizar.appendChild(paragrafo1)
-  const paragrafo2 = document.createElement('p')
-  paragrafo2.textContent = `O maior valor informado foi ${calcMaiorNumero()}`
-  divFinalizar.appendChild(paragrafo2)
-  const paragrafo3 = document.createElement('p')
-  paragrafo3.textContent = `O menor número informado ${calcMenorNumero()}`
-  divFinalizar.appendChild(paragrafo3)
-  const paragrafo4 = document.createElement('p')
-  paragrafo4.textContent = `A soma dos números é: ${somaValores()}`
-  divFinalizar.appendChild(paragrafo4)
-  const paragrafo5 = document.createElement('p')
-  paragrafo5.textContent = `A média dos números é: ${mediaValores()}`
-  divFinalizar.appendChild(paragrafo5)
+  limparDados()
+  if(bancoNumeros.length >= 1){
+    $contentFinalizar.appendChild(divFinalizar)
+    const paragrafo1 = document.createElement('p')
+    paragrafo1.textContent = `Ao todo temos ${bancoNumeros.length}`
+    paragrafo1.classList.add('paragrafo')
+    divFinalizar.appendChild(paragrafo1)
+    const paragrafo2 = document.createElement('p')
+    paragrafo2.textContent = `O maior valor informado foi ${calcMaiorNumero(bancoNumeros)}`
+    paragrafo2.classList.add('paragrafo')
+    divFinalizar.appendChild(paragrafo2)
+    const paragrafo3 = document.createElement('p')
+    paragrafo3.textContent = `O menor número informado ${calcMenorNumero()}`
+    paragrafo3.classList.add('paragrafo')
+    divFinalizar.appendChild(paragrafo3)
+    const paragrafo4 = document.createElement('p')
+    paragrafo4.textContent = `A soma dos números é: ${somaValores()}`
+    paragrafo4.classList.add('paragrafo')
+    divFinalizar.appendChild(paragrafo4)
+    const paragrafo5 = document.createElement('p')
+    paragrafo5.textContent = `A média dos números é: ${mediaValores()}`
+    paragrafo5.classList.add('paragrafo')
+    divFinalizar.appendChild(paragrafo5)
+  }else{
+    alert('Digite os dados acima!')
+  }   
 
 }
 
@@ -56,9 +66,9 @@ function limparDados(){
   divFinalizar.innerHTML = ``
 }
 
-function calcMaiorNumero(){
+function calcMaiorNumero(listaNumeros){
   let maiorNumero = 1
-  for(numero of bancoNumeros){
+  for(numero of listaNumeros){
     if(numero > maiorNumero){
       maiorNumero = numero      
     }    
@@ -88,8 +98,6 @@ function somaValores(){
   }
   return soma
 }
-
-
 
 function mediaValores(){
   let media = somaValores() / bancoNumeros.length

@@ -1,5 +1,5 @@
 body {
-  background-color: blue;
+  background-color: #0099ff;
   font: normal 15pt Arial;
 }
 
@@ -24,7 +24,16 @@ footer {
 }
 
 .div-finalizar{
-  width: 400px;
-  background: blanchedalmond;
+  width: 100%;
+  background: #0099ff;
   min-height: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 1em;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+}
+
+.paragrafo{
+  color: #fff;
 }
