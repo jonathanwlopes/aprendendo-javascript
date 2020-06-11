@@ -29,8 +29,11 @@ function adicionar(){
      }
     }
   }
+  $inputNumber.value = ``
+  $inputNumber.focus()
 }
 
+// Adicionada varias linhas para treinar .appendChild!
 function finalizar(){
   limparDados()
   if(bancoNumeros.length >= 1){
