@@ -2,19 +2,16 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-// ?
-let novaVar = [1,2,3,4,5]
+let novaVar = [1,'Jonathan',{sobrenome: 'Lopes'}, undefined, function() {}]
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
-// ?
 let novaFuncao = function(arr){
   return novaVar;
 }
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-// ?
 console.log(novaFuncao(novaVar)[1])
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -22,21 +19,17 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-// ?
-let novaFuncao2 = function(array, num){
-  return array[num];
+let novaFuncao2 = function(array, indice){
+  return array[indice];
 }
-// console.log(novaFuncao2(novaVar,1))
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-// ?
 let novoArray = [1,'Jonathan', true, [1,2,3], {param: 'objeto'}]
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-// ?
 for(i=0; i < novoArray.length; i++){
   console.log(novaFuncao2(novoArray,i))
 }
@@ -57,51 +50,51 @@ os livros.
 */
 // ?
 function book(nomelivro){
- let obj = {
-   cronicas: {
-    quantidadePaginas: 20,
+ let todosLivros = {
+   'O homem de giz': {
+    quantidadePaginas: 302,
     autor: 'Jonathan',
     editora: 'Amazon'
    },
-   contos: {
-    quantidadePaginas: 30,
-    autor: 'Gordo',
-    editora: 'Mauá'
+   'A mulher na janela': {
+    quantidadePaginas: 227,
+    autor: 'A.J Fim',
+    editora: 'Amazon'
    },
-   piadas:{
-    quantidadePaginas:10,
+   'A paciente silenciosa':{
+    quantidadePaginas:105,
     autor: 'Raul',
-    editora: 'Santo Andre'
+    editora: 'Record'
    }
  }
- if(nomelivro){
-  return {nomelivro: nomelivro, livro: obj[nomelivro]}
-}
- return obj
+  return !nomelivro ? todosLivros : todosLivros[nomelivro]
+  
 }
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
 // ?
-console.log(book('contos'))
+console.log(book())
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
-console.log(`O livro ${book('contos').nomelivro} tem ${book('contos').livro.quantidadePaginas}`)
+
+let nomeLivro = 'A mulher na janela'
+console.log(`O livro ${nomeLivro} tem ${book(nomeLivro).quantidadePaginas}`)
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
 
+
+console.log(`O auto do livro ${nomeLivro} é ${book(nomeLivro).autor}`)
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+console.log(`O livro ${nomeLivro} foi publicado pela editora ${book(nomeLivro).editora}`)
