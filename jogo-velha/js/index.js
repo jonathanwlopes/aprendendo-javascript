@@ -16,21 +16,23 @@ const $playButton = document.querySelector(".play-button");
 const $scorePlayer1 = document.querySelector(".score-player1");
 const $scorePlayer2 = document.querySelector(".score-player2");
 const $scorePlayer = document.querySelector(".score-player");
+const $inputPlayer1 = document.querySelector(".input-player1");
+const $inputPlayer2 = document.querySelector(".input-player2");
 
-let plays = ["", "", "", "", "", "", "", "", ""];
-let play = "x";
+let jogadas = ["", "", "", "", "", "", "", "", ""];
+let jogada = "x";
 let scorePlayer1 = 0;
 let scorePlayer2 = 0;
 
-function getPlay() {
-  return play;
+function pegarJogada() {
+  return jogada;
 }
 
-function changePlay() {
-  if (play === "x") {
-    play = "o";
+function trocarJogada() {
+  if (jogada === "x") {
+    jogada = "o";
   } else {
-    play = "x";
+    jogada = "x";
   }
 }
 
@@ -54,243 +56,282 @@ function handleClickCheckBoxMatch() {
 
 function handleClickSquare01() {
   if ($square01.textContent === "") {
-    $square01.textContent = getPlay();
-    plays[0] = getPlay();
+    
+    $square01.textContent = pegarJogada();
+    jogadas[0] = pegarJogada();
     checkWinner();
-    $square01.classList.add(`symbol-${getPlay()}`);
+    $square01.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
       ` <li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Primeiro Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Primeiro Quadrado</p>
+      </div>
+      </li> `;
+
+    trocarJogada();
   }
 }
 
 function handleClickSquare02() {
+
   if ($square02.textContent === "") {
-    $square02.textContent = getPlay();
-    plays[1] = getPlay();
+    $square02.textContent = pegarJogada();
+    jogadas[1] = pegarJogada();
     checkWinner();
-    $square02.classList.add(`symbol-${getPlay()}`);
+    $square02.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
       ` <li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Segundo Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Segundo Quadrado</p>
+      </div>
+      </li> `;
+
+    trocarJogada();
   }
 }
 
 function handleClickSquare03() {
   if ($square03.textContent === "") {
-    $square03.textContent = getPlay();
-    plays[2] = getPlay();
+    $square03.textContent = pegarJogada();
+    jogadas[2] = pegarJogada();
     checkWinner();
-    $square03.classList.add(`symbol-${getPlay()}`);
+    $square03.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
-      `<li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Terceiro Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      ` <li class="history-item">
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Terceiro Quadrado</p>
+      </div>
+      </li> `;
+    trocarJogada();
   }
 }
 
 function handleClickSquare04() {
   if ($square04.textContent === "") {
-    $square04.textContent = getPlay();
-    plays[3] = getPlay();
+    $square04.textContent = pegarJogada();
+    jogadas[3] = pegarJogada();
     checkWinner();
-    $square04.classList.add(`symbol-${getPlay()}`);
+    $square04.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
-      `<li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Quarto Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      ` <li class="history-item">
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Quarto Quadrado</p>
+      </div>
+      </li> `;
+    trocarJogada();
   }
 }
 
 function handleClickSquare05() {
   if ($square05.textContent === "") {
-    $square05.textContent = getPlay();
-    plays[4] = getPlay();
+    $square05.textContent = pegarJogada();
+    jogadas[4] = pegarJogada();
     checkWinner();
-    $square05.classList.add(`symbol-${getPlay()}`);
+    $square05.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
-      `<li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Quinto Quadrado</p>
-        </div>
-        </li> `;
+      ` <li class="history-item">
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Quinto Quadrado</p>
+      </div>
+      </li> `;
 
-    changePlay();
+    trocarJogada();
   }
 }
 
 function handleClickSquare06() {
   if ($square06.textContent === "") {
-    $square06.textContent = getPlay();
-    plays[5] = getPlay();
+    $square06.textContent = pegarJogada();
+    jogadas[5] = pegarJogada();
     checkWinner();
-    $square06.classList.add(`symbol-${getPlay()}`);
+    $square06.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
-      `<li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Sexto Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      ` <li class="history-item">
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Sexto Quadrado</p>
+      </div>
+      </li> `;
+    trocarJogada();
   }
 }
 
 function handleClickSquare07() {
   if ($square07.textContent === "") {
-    $square07.textContent = getPlay();
-    plays[6] = getPlay();
+    $square07.textContent = pegarJogada();
+    jogadas[6] = pegarJogada();
     checkWinner();
-    $square07.classList.add(`symbol-${getPlay()}`);
+    $square07.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
-      `<li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Setimo Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      ` <li class="history-item">
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Setimo Quadrado</p>
+      </div>
+      </li> `;
+    trocarJogada();
   }
 }
 
 function handleClickSquare08() {
   if ($square08.textContent === "") {
-    $square08.textContent = getPlay();
-    plays[7] = getPlay();
+    $square08.textContent = pegarJogada();
+    jogadas[7] = pegarJogada();
     checkWinner();
-    $square08.classList.add(`symbol-${getPlay()}`);
+    $square08.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
       ` <li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Oitavo Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Oitavo Quadrado</p>
+      </div>
+      </li> `;
+    trocarJogada();
   }
 }
 
 function handleClickSquare09() {
   if ($square09.textContent === "") {
-    $square09.textContent = getPlay();
-    plays[8] = getPlay();
+    $square09.textContent = pegarJogada();
+    jogadas[8] = pegarJogada();
     checkWinner();
-    $square09.classList.add(`symbol-${getPlay()}`);
+    $square09.classList.add(`symbol-${pegarJogada()}`);
+    let nomeJogador = $inputPlayer1.value;
+    if (pegarJogada() === "o") {
+      nomeJogador = $inputPlayer2.value;
+    }
     $historyList.innerHTML =
       $historyList.innerHTML +
-      `<li class="history-item">
-        <p class="move">${getPlay()}</p>
-        <div class="wrapper-history-item">
-        <p class="player-name">Nome do Jogador</p>
-        <p class="position-move">Nono Quadrado</p>
-        </div>
-        </li> `;
-    changePlay();
+      ` <li class="history-item">
+      <p class="move">${pegarJogada()}</p>
+      <div class="wrapper-history-item">
+  <p class="player-name">${nomeJogador}</p>
+      <p class="position-move">Nono Quadrado</p>
+      </div>
+      </li> `;
+    trocarJogada();
   }
 }
 
-
 function checkWinner() {
-  let line123 = [plays[0], plays[1], plays[2]];
-  let line456 = [plays[3], plays[4], plays[5]];
-  let line789 = [plays[6], plays[7], plays[8]];
-  let line159 = [plays[0], plays[4], plays[8]];
-  let line357 = [plays[2], plays[4], plays[6]];
-  let line147 = [plays[0], plays[3], plays[6]];
-  let line258 = [plays[1], plays[4], plays[7]];
-  let line369 = [plays[2], plays[5], plays[8]];
+  let line123 = [jogadas[0], jogadas[1], jogadas[2]];
+  let line456 = [jogadas[3], jogadas[4], jogadas[5]];
+  let line789 = [jogadas[6], jogadas[7], jogadas[8]];
+  let line159 = [jogadas[0], jogadas[4], jogadas[8]];
+  let line357 = [jogadas[2], jogadas[4], jogadas[6]];
+  let line147 = [jogadas[0], jogadas[3], jogadas[6]];
+  let line258 = [jogadas[1], jogadas[4], jogadas[7]];
+  let line369 = [jogadas[2], jogadas[5], jogadas[8]];
 
   if (
-    line123[0] === getPlay() &&
-    line123[1] === getPlay() &&
-    line123[2] === getPlay()
+    line123[0] === pegarJogada() &&
+    line123[1] === pegarJogada() &&
+    line123[2] === pegarJogada()
   ) {
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
     scoreWinner();
   } else if (
-    line456[0] === getPlay() &&
-    line456[1] === getPlay() &&
-    line456[2] === getPlay()
+    line456[0] === pegarJogada() &&
+    line456[1] === pegarJogada() &&
+    line456[2] === pegarJogada()
   ) {
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
     scoreWinner();
   } else if (
-    line789[0] === getPlay() &&
-    line789[1] === getPlay() &&
-    line789[2] === getPlay()
+    line789[0] === pegarJogada() &&
+    line789[1] === pegarJogada() &&
+    line789[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
   } else if (
-    line159[0] === getPlay() &&
-    line159[1] === getPlay() &&
-    line159[2] === getPlay()
+    line159[0] === pegarJogada() &&
+    line159[1] === pegarJogada() &&
+    line159[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
   } else if (
-    line357[0] === getPlay() &&
-    line357[1] === getPlay() &&
-    line357[2] === getPlay()
+    line357[0] === pegarJogada() &&
+    line357[1] === pegarJogada() &&
+    line357[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
   } else if (
-    line147[0] === getPlay() &&
-    line147[1] === getPlay() &&
-    line147[2] === getPlay()
+    line147[0] === pegarJogada() &&
+    line147[1] === pegarJogada() &&
+    line147[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
   } else if (
-    line258[0] === getPlay() &&
-    line258[1] === getPlay() &&
-    line258[2] === getPlay()
+    line258[0] === pegarJogada() &&
+    line258[1] === pegarJogada() &&
+    line258[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
   } else if (
-    line369[0] === getPlay() &&
-    line369[1] === getPlay() &&
-    line369[2] === getPlay()
+    line369[0] === pegarJogada() &&
+    line369[1] === pegarJogada() &&
+    line369[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", getPlay());
+    console.log("Winner", pegarJogada());
   } else if (checkDraw() === true) {
     scoreWinner();
     console.log("Empatou");
@@ -299,24 +340,22 @@ function checkWinner() {
 
 function checkDraw() {
   if (
-    plays[0] !== "" &&
-    plays[1] !== "" &&
-    plays[2] !== "" &&
-    plays[3] !== "" &&
-    plays[4] !== "" &&
-    plays[5] !== "" &&
-    plays[6] !== "" &&
-    plays[7] !== "" &&
-    plays[8] !== ""
+    jogadas[0] !== "" &&
+    jogadas[1] !== "" &&
+    jogadas[2] !== "" &&
+    jogadas[3] !== "" &&
+    jogadas[4] !== "" &&
+    jogadas[5] !== "" &&
+    jogadas[6] !== "" &&
+    jogadas[7] !== "" &&
+    jogadas[8] !== ""
   ) {
     return true;
   }
   return false;
 }
 
-function handleStart() {
-  scoreWinner();
-}
+function handleStart() {}
 
 function scoreWinner() {
   if (checkDraw() === true) {
@@ -326,13 +365,13 @@ function scoreWinner() {
     $scorePlayer2.textContent = `0${scorePlayer2}`;
   }
 
-  if (getPlay() === "x") {
+  if (pegarJogada() === "x") {
     scorePlayer1 += 1;
-    $scorePlayer.textContent = `Venceu o Jogador 1`;
+    $scorePlayer.textContent = `${$inputPlayer1.value} Venceu`;
     $scorePlayer1.textContent = `0${scorePlayer1}`;
-  } else if (getPlay() === "o") {
+  } else if (pegarJogada() === "o") {
     scorePlayer2 += 1;
-    $scorePlayer.textContent = `Venceu o Jogador 2`;
+    $scorePlayer.textContent = `${$inputPlayer2.value} Venceu`;
     $scorePlayer2.textContent = `0${scorePlayer2}`;
   }
 }

@@ -95,7 +95,7 @@ Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-console.log(pessoa.nomeCompleto()) // Executei o método
+pessoa.nomeCompleto() // Executei o método
 console.log(pessoa.nomeCompleto) // Retornei o nome completo
 
 /*
@@ -119,9 +119,9 @@ console.log(pessoa.altura)
 /*
 Faça a `pessoa` fazer 3 aniversários.
 */
-console.log(pessoa.fazerAniversario())
-console.log(pessoa.fazerAniversario())
-console.log(pessoa.fazerAniversario())
+pessoa.fazerAniversario()
+pessoa.fazerAniversario()
+pessoa.fazerAniversario()
 
 /*
 Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
@@ -134,9 +134,9 @@ console.log(pessoa.idade)
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
 com metragens diferentes passadas por parâmetro.
 */
-console.log(pessoa.andar(20))
-console.log(pessoa.andar(50))
-console.log(pessoa.andar(70))
+pessoa.andar(20)
+pessoa.andar(50)
+pessoa.andar(70)
 
 /*
 A pessoa ainda está andando? (Use a instrução para responder e comentários
@@ -147,7 +147,7 @@ console.log(pessoa.andando)
 /*
 Se a pessoa ainda está andando, faça-a parar.
 */
-console.log(pessoa.parar())
+pessoa.parar()
 
 /*
 E agora: a pessoa ainda está andando? (Use uma instrução para responder e
