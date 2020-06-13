@@ -18,6 +18,8 @@ const $scorePlayer2 = document.querySelector(".score-player2");
 const $scorePlayer = document.querySelector(".score-player");
 const $inputPlayer1 = document.querySelector(".input-player1");
 const $inputPlayer2 = document.querySelector(".input-player2");
+const $resetButton = document.querySelector(".reset-button");
+const $square = document.querySelector(".square");
 
 let jogadas = ["", "", "", "", "", "", "", "", ""];
 let jogada = "x";
@@ -54,9 +56,46 @@ function handleClickCheckBoxMatch() {
   }
 }
 
+function handleClickReset() {
+  resetaPartidaAtual();
+  $scorePlayer1.textContent = `00`;
+  $scorePlayer2.textContent = `00`;
+  $scorePlayer.textContent = `Nome do Jogador`;
+  jogadas = ["", "", "", "", "", "", "", "", ""];
+  jogada = "x";
+  scorePlayer1 = 0;
+  scorePlayer2 = 0;
+}
+
+function resetaPlacar() {
+  if (scorePlayer1 === 3 || scorePlayer2 === 3) {
+    $scorePlayer1.textContent = `00`;
+    $scorePlayer2.textContent = `00`;
+    $scorePlayer.textContent = `Nome do Jogador`;
+    jogadas = ["", "", "", "", "", "", "", "", ""];
+    jogada = "x";
+    scorePlayer1 = 0;
+    scorePlayer2 = 0;
+  }
+}
+
+function resetaPartidaAtual() {
+  setTimeout(function () {
+    $historyList.textContent = ``;
+    let square = [$square01, $square02,$square03,$square04,$square05,$square06,$square07,$square08,$square09];
+     for (i = 0; i < square.length; i++) {
+      square[i].textContent = ``;
+      square[i].classList.remove(`symbol-x`);
+      square[i].classList.remove(`symbol-o`);
+      jogadas[i] = '';
+    }
+    jogada = "x";
+    resetaPlacar();
+  }, 1000);
+}
+
 function handleClickSquare01() {
   if ($square01.textContent === "") {
-    
     $square01.textContent = pegarJogada();
     jogadas[0] = pegarJogada();
     checkWinner();
@@ -80,7 +119,6 @@ function handleClickSquare01() {
 }
 
 function handleClickSquare02() {
-
   if ($square02.textContent === "") {
     $square02.textContent = pegarJogada();
     jogadas[1] = pegarJogada();
@@ -281,60 +319,60 @@ function checkWinner() {
     line123[1] === pegarJogada() &&
     line123[2] === pegarJogada()
   ) {
-    console.log("Winner", pegarJogada());
     scoreWinner();
+    resetaPartidaAtual();
   } else if (
     line456[0] === pegarJogada() &&
     line456[1] === pegarJogada() &&
     line456[2] === pegarJogada()
   ) {
-    console.log("Winner", pegarJogada());
     scoreWinner();
+    resetaPartidaAtual();
   } else if (
     line789[0] === pegarJogada() &&
     line789[1] === pegarJogada() &&
     line789[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", pegarJogada());
+    resetaPartidaAtual();
   } else if (
     line159[0] === pegarJogada() &&
     line159[1] === pegarJogada() &&
     line159[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", pegarJogada());
+    resetaPartidaAtual();
   } else if (
     line357[0] === pegarJogada() &&
     line357[1] === pegarJogada() &&
     line357[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", pegarJogada());
+    resetaPartidaAtual();
   } else if (
     line147[0] === pegarJogada() &&
     line147[1] === pegarJogada() &&
     line147[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", pegarJogada());
+    resetaPartidaAtual();
   } else if (
     line258[0] === pegarJogada() &&
     line258[1] === pegarJogada() &&
     line258[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", pegarJogada());
+    resetaPartidaAtual();
   } else if (
     line369[0] === pegarJogada() &&
     line369[1] === pegarJogada() &&
     line369[2] === pegarJogada()
   ) {
     scoreWinner();
-    console.log("Winner", pegarJogada());
+    resetaPartidaAtual();
   } else if (checkDraw() === true) {
-    scoreWinner();
-    console.log("Empatou");
+    scoreWinner("empatou");
+    resetaPartidaAtual();
   }
 }
 
@@ -355,14 +393,18 @@ function checkDraw() {
   return false;
 }
 
-function handleStart() {}
+function handleStart() {
+  resetaPlacar();
+  resetaPartidaAtual();
+}
 
-function scoreWinner() {
-  if (checkDraw() === true) {
+function scoreWinner(empate) {
+  if (empate === "empatou") {
     scorePlayer1 += 1;
     $scorePlayer1.textContent = `0${scorePlayer1}`;
     scorePlayer2 += 1;
     $scorePlayer2.textContent = `0${scorePlayer2}`;
+    return empate;
   }
 
   if (pegarJogada() === "x") {
@@ -376,6 +418,7 @@ function scoreWinner() {
   }
 }
 
+$resetButton.addEventListener("click", handleClickReset);
 $playButton.addEventListener("click", handleStart);
 $checkBoxMatch.addEventListener("click", handleClickCheckBoxMatch);
 $checkBox.addEventListener("click", handleClickCheckBox);

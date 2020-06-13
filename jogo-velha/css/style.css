@@ -311,12 +311,14 @@ body {
 }
 
 .symbol-x {
-  color: #2f75f7;
+  color: yellow;
   box-shadow: 3px 3px 7px red; 
 
 }
 
 .symbol-o {
-  color: #2feaf7;
+  color: #7ff15c;
   box-shadow: 3px 3px 7px red; 
 }
+
+

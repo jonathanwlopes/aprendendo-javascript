@@ -59,25 +59,23 @@ let calculator = function calculator(opmat) {
       opmat === "-" ||
       opmat === "*" ||
       opmat === "/" ||
-      opmat === "%"){
-        
+      opmat === "%"){       
         let resultado = eval(`${number1} ${opmat} ${number2}`);
         return resultado;
       }
       return `Operação inválida`
     };
-  
-  
 };
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-let sum = calculator("e");
+
+let sum = calculator("+");
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
-console.log(sum(20, 10));
+console.log(sum(10,10));
 
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
@@ -97,3 +95,4 @@ console.log(subtraction(10, 5));
 console.log(multiplication(10, 2));
 console.log(division(10, 2));
 console.log(mod(10, 2));
+
