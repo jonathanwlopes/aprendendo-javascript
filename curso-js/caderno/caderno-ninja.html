@@ -6,9 +6,96 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Arrays</h1>
+  <h1>Arrays (objetos disfarçados)</h1>
   <p>São objetos disfarçados, que possuem seus proprios metodos e propriedades</p>
   <p>Uma das propriedades dos arrays é o length, que conta a quantidade de itens que tem no array</p>
   <p>Um método do array é o push, que adicionar um item ao final do array: <strong>array.push('valor')</strong></p>
+  <p>Para adicionar itens no meu array tenho algumas formas: <strong>array[indice] = 10</strong></p>
+  <p>Um detalhe importante é array = ['','','',''] tenho um array de quatro posições, mas se eu utilizar o comando array[indice] = 10
+    será adicionada o valor ao 10º indice, deixando os anteriores vaziu ou seja <strong>array = ['','',...['10']</strong>
+  </p>
+  <p>Lembando que ao chamar o array.push = ('valor'), adicionamos ao final da lista</p>
+  <p>Para remover o ultimo valor do array, podemos chamar a sintaxe <strong>array.pop()</strong></p>
+  <h1>Metodos interessantes de array</h1>
+  <p><strong>array.join()</strong>Este comando faz a junção dos itens do array, podendo passar como parametro um espaço
+  exemplo: <strong>console.log('Meu almoço hoje será: ' array.join(' '))</strong> vai me retornar a frase mais todos os itens do array</p>
+  <p>Temos também o <strong>array.reverse()</strong> onde os valores do array são invertidos, este método modifica o array e possui efeito colateral.</p>
+  <p>Temos o <strong>array.sort()</strong>este método vai ordenar os itens do array por ordem alfabetica e também possui efeito colateral</p>
+  <p>Outro método dos array é o <strong>array.toString()</strong>que me devolve o array em formato de string, separado por uma virgula,
+  este método não tem efeito colateral, a diferença do join('') para o toString() é que no join consig
+  definir qual é o separador, espaço, dois pontos, virgula etc..</p>
+  <p>Outro método é o <strong>array.concat([5,6,'Jonathan'])</strong> neste caso ele vai concatenar meu array atual,
+  com os valores passados por parâmetro, não gerando efeito colateral. ()</p>
+  <p><strong>Adicionar item no inicio do array</strong>, utilizamos a sintaxe array.unshift('valor'),
+  onde será adicionado esse novo valor ao inicio do array, o oposto para adicionar no final usamos o array.push(''), para remover o ultimo array.pop()</p>
+  <p>Outro método é o <strong>array.shift()</strong> remove o primeiro item do array.</p>
+  <p>Método <strong>array.slice()</strong>este método possui dois parâmetros, o indice de inicio e de final, ele vai retornar todos valores entres este itens: array.slice(3,10),
+  será retornado todo valor do indice 3 até o índice 9, pois ele não mostra o ultimo indice, este comando não tem efeito colateral.</p>
+  <p>Temos o método <strong>array.splice()</strong> que é muito diferente do slice(), o método splice ele tem efeito colateral,
+  ou seja ele modifica o array principal, e ele pode tanto adicionar como remover itens do array</p>
+  <h1>Método array.splice()</h1>
+  <p><strong>array.splice()</strong>O primeiro parametro define onde vai ocorrer a ação, de inclusão ou remoção daquele valor.</p>
+  <p>array.splice(3) --> neste caso o splice vai remover, tudo que tiver do indice três para frente.</p>
+  <p>array.splice(1,3) --> neste caso eu começo a remover do indice 1 e quantos valores eu quero remover aqui no exemplo 3 valores a partir do indice 1</p>
+  <p><strong>Adicionar itens a partir de array.splice()</strong></p>
+  <p><strong>array.splice(1,0, 'a')</strong> neste exemplo, a partir do indice 1 não removemos nenhum item(0), e adicionamos um, novo valor ('a')</p>
+  <p>Aqui temos um for personalizado para arrays, com o método <strong>array.forEach</strong> ficando assim mais fácil a leitura do código</p>
+  <textarea>
+  array = [1,2,3,'Jonathan',5,6,7]
+  array.forEach(function(item, index, array){
+  console.log(item, index, array)
+  })</textarea>
+  <p>Temos também o método every, onde ele vai verificar se todos os itens do array são válidos</p>
+  <p>Temos também o método some, onde ele vai verificar se um dos itens é verdadeiro.</p>
+  <textarea>
+    /// Método every ///
+    array = [1,2,3,4,5,6,7]
+    let every = array.every(function(item){
+    console.log(item)
+    return item < 5; //Todos os itens são menores do que 5?
+    })
+    console.log(every) // Retornou false!   
+
+    /// Método some ///
+    let some = array.some(function(item){
+    console.log(item)
+    return item % 2 === 0; // Qualquer um dos itens do array é menor que 5
+    })
+    console.log(some) // Retorna verdadeiro
+  </textarea>
+  <p>Mais um método é o array.map que percorre todo o array também como os método anteriores, porem ele cria um novo array</p>
+  <textarea>
+    array = [1,2,3,4,5,6,7]
+    let map = array.map(function(item){
+      console.log(item)
+      return item +=1 // No array atual somou +1 em seu item
+    })
+    console.log(map) // Me retornou um novo array com a soma dos itens sem modificar o primeiro array.
+  </textarea>
+  <p>Temos também o método <strong>array.filter()</strong> que irá filtrar os itens do array, retornando um novo array filtrado</p>
+  <textarea>
+    array = [1,2,3,4,5,6,7]
+    let filter = array.filter(function(item, index, array){
+      return item > 2 // Neste caso vai criar um novo array filtrando e retornar os itens > 2
+    })
+    console.log(filter)
+  </textarea>
+  <p>Mais um método interessante é o <strong>array.indexOf(4,1)</strong> onde a partir do índice 1 o método vai pesquisar pelo valor 4 no array</p>
+  <p>Uma forma interesante de utilizar o indexOf é: array.indeOf(4) > -1 desta forma ele vai retornar true ou false ou seja existe ou não o valor no array.</p>
+  <h1>Object</h1>
+  <p>Os objetos possuem uma maneira de Herança, onde utilizando a sintaxe.
+    <strong>obj2.Object.create(obj)</strong> O objeto 2 vai receber todas as propriedades do obj</p>
+  <p>O objeto também posssui um método chamado hasOwnProperty, que vai verificar se o objeto tem a propriedades
+    (desta forma, esse metodo é muito útil para verificar apenas as propriedades do objeto, sem as heranças),
+    <strong>obj2.hasOwnPropety('x')</strong>
+  </p>
+  <p>Outro método dos objetos é o <strong>Object.keys(obj), este método retorna o seu objeto em formato de array,
+    assim possibilitando utilizar as propriedades de objeto em array.
+  </strong></p>
+  <p>Podemos confertir se um objeto é prototipo de outro utilizando a sintaxe <strong>obj.isPrototypeOf(obj2)</strong></p>
+  <p>Outro método é o <strong>let str = JSON.strigify(obj)</strong> que vai transformar o obj em string,
+  para realizar o processo inverso transformar string em obj utilizamos <strong>JSON.parse(str)</strong></p>
+    <h1>O objeto this</h1>
+    <p></p>
 </body>
 </html>
