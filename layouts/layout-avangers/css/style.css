@@ -1,0 +1,233 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #173444;
+
+}
+
+.sc-catalago{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 95%;
+  border-radius: 10px;
+  /* background-image: url('/img/background.jpg');  */
+  background-size: cover;
+  background-image: linear-gradient(90deg, #020024 0%, #051320 35%, #163341 100%);
+
+}
+
+.wrapper-catalago{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height:50%;
+}
+
+.wrapper-catalago-superior{
+display: flex;
+justify-content: center;
+}
+
+.img-catalago{
+  border-radius: 7px;
+  width: 250px;
+  height: 350px;
+}
+
+.wrapper-info-superior{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height:100%;
+  margin-left: 1rem;
+}
+
+.catalago-menu{
+  display: flex;
+}
+.wrapper-catalago-titulo{
+  display:flex;
+  flex-direction: column;
+}
+
+.link-primario{
+  text-decoration: none;
+  color: #AEB9B9;
+}
+
+.link-destaque{
+  text-decoration: none;
+  color: #187CAA;
+  font-weight: 700;
+
+}
+
+.txt-titulo{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 42px;
+  color: #F7FEFF;
+}
+
+.txt-sub-titulo{
+  font-size: 1rem;
+  line-height: 26px;
+  color: #f3f3f3;
+}
+
+.wrapper-button-tipos{
+  display: flex;
+}
+
+.btn-tipos-filmes{
+  border: none;
+  background-color: #10111790;
+  color: #187CAA;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.wrappers-audiencia{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  height: 30%;
+
+}
+
+.wrapper-rating{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.wrapper-estrela{
+  display: flex;
+  align-items: center;
+  color: #F6E41F;
+  
+}
+
+.wrapper-notas{
+  margin-left: 0.5rem;
+}
+
+.txt-nota{ 
+  color: #F6E41F;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.txt-audiencia{
+  color: #F6E41F;
+  font-size: 1rem;
+}
+
+
+.btn-rate{
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #05AFEF;
+  color: #f3f3f3;
+  padding: 0.8em 2em;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.btn-rate:hover{
+  background-color: #4cb3d8;
+}
+
+
+/* ===NOTA CRITICAS=== */
+
+.wrapper-notas{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  height: 30%;
+
+
+}
+.wrapper-nota-criticas{
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+
+.wrapper-alinha-media{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-left: 4rem;
+ width: 80%;
+}
+
+.txt-descricao-critica{
+  font-size: 1rem;
+  font-weight: 700;
+  color: #134675;
+}
+
+.wrapper-classifica-media{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper-media{
+  display:flex;
+  align-items: center;
+  height: 100%;
+}
+
+.txt-destaque-numeros{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #28A2D5;
+}
+
+.txt-sub-media{
+  font-size: 1.4rem;
+  color: #263741;
+}
+
+.txt-sub-descricao{
+  font-size: 1rem;
+  color: #778A99;
+  margin-top: 1em;
+}
+
+.wrapper-contagem{
+  text-align: center;
+}
+
+.wrapper-alinha-audiencia{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 33%;
+  margin-left: 2rem;
+
+}
+
+.wrapper-nota-audiencias{
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+
