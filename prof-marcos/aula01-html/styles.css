@@ -1,0 +1,129 @@
+.title-welcome{
+font-size: 40px;
+color: #ffffff;
+margin: 0;
+}
+
+.paragraph-welcome{
+    color: #8dd1c4;
+}
+
+.titile-account{
+    color: #71ab9a;
+}
+
+.sub-title-account{
+    color: #d3d3d5;
+}
+body{
+    background-color: #ecf0f1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.box-left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #58af9c;
+
+}
+
+.welcome-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 50%;
+}
+
+.box-right{
+    width: 60%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-social{
+    display: flex;
+    border: 1px solid #cccccc;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.social-wrapper{
+    display: flex;
+}
+
+.button-sign-up{
+    background-color: #59af9d;
+    text-transform: uppercase;
+    width: 180px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button-sign-in{
+    background-color: transparent;
+    text-transform: uppercase;
+    width: 180px;
+    height: 40px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-field{
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    outline: none;
+
+}
+
+.box-field{
+    display: flex;
+    height: 40px;
+    background-color: #ecf0f1;
+    margin-bottom: 8px;
+    padding: 10px;
+    width: 400px;
+}
+
+.register-icon{
+    margin: 4px;
+
+}
