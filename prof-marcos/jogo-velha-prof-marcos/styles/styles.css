@@ -1,0 +1,142 @@
+.container {
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 27.76%;
+  background-color: #0097e6;
+}
+
+.container-center {
+  width: 44.48%;
+  background-color: gray;
+}
+
+.container-right {
+  width: 27.76%;
+  background-color: yellow;
+}
+
+.user-filed-box {
+  width: 72%;
+}
+
+.user-field-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  margin-bottom: 29px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-right: 6px;
+}
+
+.user-field {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 27px;
+}
+
+.switcher {
+  min-width: 82px;
+  height: 30px;
+  background: #0097e6;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.switcher:hover .switcher-ball {
+  right: 6px;
+}
+
+.switcher-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  transform: 300ms;
+  right: 56px;
+}
+
+.match-type-title {
+  color: #45f391;
+  margin-bottom: 38px;
+  font-size: 20px;
+}
+
+.match-type-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+  margin-bottom: 33px;
+}
+
+.match-type-text {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.button-play{
+    width: 72%;
+    height: 60px;
+    background-color: #45F391;
+    border-radius: 15px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-bottom: 46px;
+}
+
+.match-historic-list{
+    width:73%;
+}
+
+
+.match-historic-item{
+width:73%;
+
+}
+
+.match-historic-title{
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 38px;
+}
+
+.match-historic-winner-box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 76px;
+    background-color: #ffffff;
+    padding-left: 21px;
+}
+
+.match-historic-winner-title{
+    color: #45F391;
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+
+.match-historic-winner-title{
+
+
+}
