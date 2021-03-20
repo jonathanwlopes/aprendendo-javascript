@@ -1,0 +1,39 @@
+body {
+  background-color: #0099ff;
+  font: normal 15pt Arial;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+}
+
+section {
+  background-color: #fff;
+  width: 500px;
+  padding: 15px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+}
+
+.div-finalizar{
+  width: 100%;
+  background: #0099ff;
+  min-height: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 1em;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.349);
+}
+
+.paragrafo{
+  color: #fff;
+}

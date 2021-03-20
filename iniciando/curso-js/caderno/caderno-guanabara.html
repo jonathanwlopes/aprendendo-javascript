@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Aulas</title>
+   </head>
+   <body>
+      <div class="nomeclaturas">
+         <h1>Aula 2 - Entendendo as nomeclaturas</h1>
+         <p>
+            HTML e CSS não são linguaguens de programação, são linguagens de
+            marcação, utilizadas para contruir páginas.
+         </p>
+         <p>
+            Node.js é uma técnologia que expande o javascript para fora dos
+            navegadores, conseguindo assim utilizar seu poder por exemplo no visual
+            code.
+         </p>
+         <p>
+            Javascript, não tem nada a ver com Java, somente o nome devido a uma
+            estrategia de marketing pois na epoca do lançamento nos anos 90 a
+            linguagem Java era muito conhecida.
+         </p>
+         <p>
+            A empresa que criou a linguagem javascript foi a netscape, após sua
+            falencia, com a expansão e ambição da microsoft, o javascript voltou
+            forte com a padronização ECMAScript.
+         </p>
+         <p>
+            O Javascript teve suas funcionalidades padronizadas, e se tornou ECMA
+            atualmente atravé dele anualmente temos atualização da linguaguem.
+         </p>
+         <p>
+            React, Angular, jQuery, são linguagens baseadas em Javascript, sua
+            utilidade são bibliotecas para facilitar a programação, mais como todas
+            utlizam javascript em sua base temos um grande motivo e primordial
+            entender e dominar a linguagem pai javascript, para somente assim
+            utilizar essas ferramentas.
+         </p>
+      </div>
+      <div class="">
+         <h1>Aula 3 - Primeiros Passos</h1>
+         <p>
+            Você só aprende a programar praticando, nunca vai aprender somente
+            assistindo videos, a persistencia leva a exelencia, o erro faz parte do
+            aprendizado.
+         </p>
+         <p>Uma dica importante é ler conteudos, manuais, livros!</p>
+         <h2>Recomendação de livros</h2>
+         <p>Javascript o guia definitivo, Javascript guia do programador</p>
+         <p>https://developer.mozilla.org/pt-BR/docs/Aprender</p>
+      </div>
+      <div class="variaveis e dados">
+         <h1>Entendendo Variaveis</h1>
+         <p>
+            Imaginar um terreno, e dentro deste terreno temos de organizar as vagas
+            pois se não organizar não teremos controle.
+         </p>
+         <p>
+            Para organizar criamos a variavel vaga e lemos que esta vaga recebe um
+            carro exemplo <strong>var vaga1 = 'carro1'</strong> (leia-se vaga recebe
+            carro) nunca diga que a vaga é igual a carro.
+         </p>
+         <p>
+            No JS, temos diversos tipos de dados, como number, string, boolean,
+            null, undefined, object (vetores), function.
+         </p>
+         <p>
+            Uma informação importante é: a varíavel pode mudar o seu tipo typeof,
+            durante a execução do programa, basta definir, exemplo:
+            <strong>var numero = 16</strong> e na sequencia dizer que
+            <strong>var numero = '16'</strong> seu tipo typeof deixou de ser number
+            para ser uma string.
+         </p>
+         <h1>Tratamento/Manipulação de dados</h1>
+         <p>Para executar a conversão de dados de string para inteiro ou float,
+            devemos utilizar a seguinte formula: <strong>var n1 = Number.parseInt(window.prompt('Digite o número'))</strong>
+            Esta é uma forma antiga de utilizar hoje conseguimos utilizar somente <strong>Number</strong> para realizar a conversão.
+         </p>
+         <p>Nas versões atuais de javascript, podemos utilizar para concatenar as informações
+            a técnica de template strings onde vamos realizar desta forma: <strong>`Eu estou aprendendo ${nomeVariavel}`</strong>
+         </p>
+         <p>Alguns comandos para manipular os dados são o <strong>var.length</strong> que me retorna a quantidade de caracter da variavel(em números)
+            temos também o <strong>variavel.toUpperCase()</strong>que vai me retornar a string em letras maiusculas
+            temos também o <strong>variavel.toLowerCaseCase()</strong>que vai me retornar a string em letras minusculas
+         <p>Temos algumas formas de formatar os dados com javascript.
+            um comando útil para imprimir na tela é: <strong>document.write(`O que desaja imprimir ${variavel}`)</strong>
+         </p>
+         <p>Conseguimos também formatar numeros o comando que utilizamos é: <strong>variavel.toFixed(2).replace('.',',')</strong> neste caso teremos o resultado
+            onde será incliudo duas casas apos a virgula, e trocado o . por ,
+         </p>
+         <p>Outro comando útil para formatação de número é o <strong>variavel.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})</strong></p>
+         </p>
+      </div>
+      <div class="operadores">
+         <h1>Operadores</h1>
+         <p>Temos varios operadores, os aritimeticos, de atribuição, relacionais lógicos e ternários.</p>
+         <p>Atritimeticos: + - * / % ** (** var ao quadrado)</p>
+         <p>Entendendo resto da divisão: 8 / 5 da 1 * 5 pra 8 restam 3</p>
+         <p>Operadores relacionais: maior(>) ...  </p>
+         <p>Operadores lógicos: ! (negação) && (Conjunção) ||(disjunção)</p>
+         <p>Ordem de precedencia: Aritimeticos - Relacionais - Logicos</p>
+         <p>Operador ternário: <strong>média > 7? 'Aprovado' : 'Reprovado'</strong></p>
+      </div>
+      <div class="dom">
+         <h1>Document Object Model</h1>
+         <p>Arvore DOM inicia com uma window que possui varios objetos dentro: são eles location, document, history.. dentre muitos outros. dentro do document eu possuo o html, com seu head e body.</p>
+         <h1>Elementos</h1>
+         <p>Toda e qualquer coisa que eu consiga acessar na áarvore dom</p>
+         <p>Comandos muitos uteis para buscar elementos: document.getElementsById('id'), hoje uma maneira fácil de selecionar o elemento é atraves do querySelector. exemplo: <strong>document.querySelector(#id)</strong> ou document.querySelector(.classe)</p>
+         <p><strong>Tudo que está estre chaves {} é um bloco</strong></p>
+         <p><strong>function ação(parametro){bloco}</strong></p>
+         <h1>Event List</h1>
+         <p>Temos diversas opções de eventos com o elemento! <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">Clique</a></p>
+      </div>
+      <div class="ifs">
+         <h1>Condições</h1>
+         <p>Quando temos uma condição, podemos chamar de desvio condicional</p>
+         <h1>Switch</h1>
+         <p>switch(expressão){</br>#se-a-expressao-for#</br>case valor 1:</br> break</br> #se-a-expressao-for#</br> case valor2:</br> break</br>default:</br> break</br>}</p>
+         <p>Dentro de cada bloco deve ser utilizado o comando break</p>
+      </div>
+      <div class="emojis">
+         <h1>Emojis</h1>
+         <p>Para encontrar emojis podemos localizar seu código UTF <a href="https://unicode.org/emoji/charts/full-emoji-list.html">Clique</a></p>
+         <p>Para utilizar o emoji dentro da template string <strong>\u{1F449}	</strong></p>
+      </div>
+   </body>
+</html>

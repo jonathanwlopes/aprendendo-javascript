@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-mobile.css" />
+    <title>Game - Pedra - Papel - Tesoura</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="wrapperVencedor">
+        <h3 class="painelVencedor estiloFonteH4">Resultado</h3>
+        <div class="contadorVencedor">
+          <div class="wrapperJogadores">
+            <h3 class="estiloFonteH4">Jogador 1</h3>
+            <div id="pontosJogador1" class="pontosJog"></div>
+            <h3 class="estiloFonteH4">vs</h3>
+            <div id="pontosJogador2" class="pontosJog"></div>
+            <h3 class="estiloFonteH4">Jogador 2</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="painelRespostas">
+        <div class="wrapperRespostas">
+          <div class="painelEsq">
+            <button id="botaoPedra1" disabled class="btnEscolha estiloFonteH4">
+              Pedra
+            </button>
+            <button id="botaoPapel1" disabled class="btnEscolha estiloFonteH4">
+              Papel
+            </button>
+            <button
+              id="botaoTesoura1"
+              disabled
+              class="btnEscolha estiloFonteH4"
+            >
+              Tesoura
+            </button>
+          </div>
+          <div class="painelCentral">
+            <div id="escolhaJogador1" class="imgEscolhida"></div>
+            <h1 class="estiloFonteH1">vs</h1>
+            <div id="escolhaJogador2" class="imgEscolhida"></div>
+          </div>
+          <div class="painelDir">
+            <button id="botaoPedra2" disabled class="btnEscolha estiloFonteH4">
+              Pedra
+            </button>
+            <button id="botaoPapel2" disabled class="btnEscolha estiloFonteH4">
+              Papel
+            </button>
+            <button
+              id="botaoTesoura2"
+              disabled
+              class="btnEscolha estiloFonteH4"
+            >
+              Tesoura
+            </button>
+          </div>
+        </div>
+        <div class="painelIniciar">
+          <button id="iniciarPartida" class="btnInicioReset estiloFonteH4">
+            Iniciar
+          </button>
+          <button id="resetarGeral" class="btnInicioReset estiloFonteH4">
+            Reset
+          </button>
+          <button class="ativar-bot estiloFonteH4">Ativar Bot</button>
+        </div>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
