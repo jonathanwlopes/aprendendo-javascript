@@ -117,7 +117,6 @@
   color: #ffffff;
   font-size: 30px;
   margin-bottom: 20px;
-  
 }
 
 .historic-match-title {
@@ -126,11 +125,10 @@
   margin-bottom: 5px;
 }
 
-.separator-line{
+.separator-line {
   width: 100%;
-border: 1px solid #ffffff;
-outline: none;
-
+  border: 1px solid #ffffff;
+  outline: none;
 }
 .wrapper-historic-match {
   display: flex;
@@ -196,10 +194,10 @@ outline: none;
   background-color: #ffffff;
 }
 
-.reset-game{
+.reset-game {
   width: 100%;
   height: 60px;
-  color: #0097E6;
+  color: #0097e6;
   font-size: 30px;
   background-color: #ffffff;
   box-shadow: 0px 3px 6px #00000029;
@@ -207,16 +205,141 @@ outline: none;
   border: none;
   outline: none;
   margin-top: 20px;
-
 }
 .panel-central {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #00b0e6;
   width: 44%;
   height: 100%;
 }
 
+.wrapper-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+  height: 10%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.score-player01 {
+  color: #0097e6;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.wrapper-scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score {
+  color: #0097e6;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.name-player-yourturn {
+  color: #0097e6;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.score-player02 {
+  color: #0097e6;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.wrapper-main-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+}
+
+.panel-move {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31%;
+  height: 30%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  color: #6a6a6a;
+  font-size: 150px;
+  font-weight: bold;
+  border-radius: 10px;
+}
 .panel-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #0097e6;
   width: 28%;
   height: 100%;
+}
+
+.play-historic{
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.wrapper-play-historic{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.play-historic-box{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 76px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-move{
+  color: #6A6A6A;
+  font-size: 55px;
+  margin-left: 10px;
+}
+
+.wrapper-player-move{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.name-player{
+  color: #6A6A6A;
+  font-size: 20px;
+}
+
+.player-move{
+  color: #0097E6;
+  font-size: 20px;
 }

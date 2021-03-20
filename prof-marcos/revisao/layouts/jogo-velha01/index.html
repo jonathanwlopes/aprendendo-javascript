@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Jogo da Velha 01</title>
   </head>
   <body>
@@ -22,7 +27,7 @@
             </div>
           </div>
           <span class="type-game-title">Tipo de Partida</span>
-          
+
           <div class="wrapper-type-game">
             <span class="type-game-choice">Melhor de 3</span>
             <button class="switcher">
@@ -31,16 +36,15 @@
             <span class="type-game-choice">Melhor de 5</span>
           </div>
           <button class="start-game">Jogar</button>
-          <hr class="separator-line">
+          <hr class="separator-line" />
           <span class="historic-match-title">Histórico de Partidas</span>
-          <hr class="separator-line">
+          <hr class="separator-line" />
 
           <div class="wrapper-historic-match">
             <div class="wrapper-box-match">
               <div class="box-winner">
                 <span class="winner-title">Vencedor</span>
                 <span class="winner-name">Nome do Jogador</span>
-                
               </div>
               <span class="scenery-title">Cenário</span>
               <div class="historic-box">
@@ -151,14 +155,107 @@
               </div>
             </div>
           </div>
-          <hr class="separator-line">
+          <hr class="separator-line" />
           <button class="reset-game">Reiniciar</button>
         </div>
       </section>
 
-      <section class="panel-central"></section>
+      <section class="panel-central">
+        <div class="wrapper-central">
+          <div class="scoreboard">
+            <span class="score-player01">01</span>
+            <div class="wrapper-scoreboard">
+              <span class="score">Placar</span>
+              <span class="name-player-yourturn">Nome do Jogador</span>
+            </div>
+            <span class="score-player02">02</span>
+          </div>
 
-      <section class="panel-right"></section>
+          <div class="wrapper-main-panel">
+            <span class="panel-move">X</span>
+            <span class="panel-move">X</span>
+            <span class="panel-move">X</span>
+            <span class="panel-move">X</span>
+            <span class="panel-move">X</span>
+            <span class="panel-move">X</span>
+            <span class="panel-move">X</span>
+            <span class="panel-move"></span>
+            <span class="panel-move">X</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-right">
+
+        <h4 class="play-historic">Histórico de Jogadas</h4>
+
+        <div class="wrapper-play-historic">
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+
+          <div class="play-historic-box">
+            <span class="icon-move">O</span>
+            <div class="wrapper-player-move">
+              <span class="name-player">Nome do Jogador</span>
+              <span class="player-move">Primeiro Quadrado</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="scripts/index.js"></script>
   </body>
 </html>
