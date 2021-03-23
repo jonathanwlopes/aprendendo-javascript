@@ -71,13 +71,14 @@
 .wrapper-icons{
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 50%;
   height: 10%;
 }
 
 .fab{
   color: #6b6b84;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .fab:hover{
