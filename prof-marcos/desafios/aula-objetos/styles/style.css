@@ -13,7 +13,7 @@
   background-color: #f8f9fa;
 }
 
-.articles {
+.wrapper-articles {
   width: 90%;
   height: 90%;
 }
@@ -35,16 +35,54 @@
   margin-bottom: 10px;
 }
 
-.next-page-sub-title {
+.click-add-article {
   color: #212529;
   font-size: 1rem;
-  text-align: end;
   font-weight: bold;
+  text-align: end;
   cursor: pointer;
-  margin-bottom: 50px;
 }
 
-.next-page-sub-title:hover {
+.click-add-article:hover {
+  color: #43e6e6;
+  transition: 300ms;
+}
+
+.wrapper-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.new-articles-title {
+  color: #e89d3a;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.form-label {
+  color: #404a6e;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.form-add-button {
+  background-color: transparent;
+  border-color: transparent;
+  border: 1px solid;
+  color: #404a6e;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.form-add-button:hover {
   color: #43e6e6;
   transition: 300ms;
 }

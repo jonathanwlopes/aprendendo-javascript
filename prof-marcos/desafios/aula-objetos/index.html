@@ -4,25 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Exercise</title>
   </head>
   <body>
     <main class="container">
-      <section class="articles">
+      <section class="wrapper-articles">
         <div class="wrapper-title">
           <h3 class="blog-sub-title">From our blog</h3>
           <h2 class="blog-title">Latest article</h2>
         </div>
-        <a href="./new-article.html" class="links"><h4 class="next-page-sub-title">NEW ARTICLE <i class="fas fa-chevron-right fa-sm"></i></h4></a>
         
-        <div class="panel-articles">        
-          
+        <a href="#" class="links"
+          ><h4 class="click-add-article">
+            See more articles <i class="fas fa-chevron-right fa-sm"></i></h4
+        ></a>
+
+        <div class="wrapper-form">
+          <span class="new-articles-title">add a new article:</span>
+          <form class="add-new-article">
+            <ul>
+              <label class="form-label">Image: <input class="form-image" type="img" placeholder="insert link image"/></label>
+              <label class="form-label">Title: <input class="form-title" type="text" placeholder="insert title article"/></label>
+              <label class="form-label">Content: <input class="form-content" type="text" placeholder="insert content article"/></label>
+              <button class="form-add-button">submit</button>
+            </ul>
+          </form>
         </div>
+            
+
+        <div class="panel-articles"></div>
       </section>
     </main>
     <script type="module" src="./scripts/index.js"></script>
-    <script src="https://kit.fontawesome.com/a899726fcb.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a899726fcb.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
