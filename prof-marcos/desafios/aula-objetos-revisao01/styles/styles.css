@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.banner-info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  background-color: #f2f2f2;
+  margin-bottom: 1rem;
+}
+
+.wrapper-banner {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.wrapper-men-shoes {
+  display: flex;
+  width: 33%;
+  height: 90%;
+}
+
+.banner-img {
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.banner-img:hover {
+  filter: brightness(105%);
+  cursor: pointer;
+}
+
+.wrapper-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.banner-sub-title {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 1rem;
+}
+
+.btn-shopnow {
+  width: 8rem;
+  border: none;
+  color: #e21836;
+}
+
+.sales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 70%;
+}
+
+.wrapper-title-sales {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.newarrivals-title {
+  color: #222;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.newarrivals-line {
+  height: 2px;
+  border-width: 0px;
+  background-color: #666666;
+  width: 100%;
+}
+
+.wrapper-panel-newarrivals {
+  display: flex;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 100%;
+}
+
+.wrapper-content-newarrivals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 90%;
+  margin-left: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.wrapper-content-newarrivals:hover {
+  box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.img-product {
+  width: 300px;
+  height: 300px;
+  max-width: 210px;
+  max-height: 210px;
+}
+
+.btn-quick {
+  width: 100%;
+  font-size: 12px;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem;
+  background-color: #e21836;
+  margin-bottom: 1rem;
+}
+
+.wrapper-title-newarrivals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.name-product {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.name-product:hover {
+  font-size: 16px;
+  color: #e21836;
+}
+
+.price-product {
+  color: #e21836;
+}
+
+.wrapper-icon-newarrivals{
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+
+}
+
+.fas {
+  color: #666666;
+  text-decoration: none;
+}
+
+.fas:hover {
+  text-decoration: underline;
+  color: #e21836;
+  transition: 600ms;
+}
+
+.new-products{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.wrapper-title-new-products {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.new-product-title {
+  color: #222;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.new-product-line {
+  height: 2px;
+  border-width: 0px;
+  background-color: #666666;
+  width: 100%;
+}
