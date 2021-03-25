@@ -13,15 +13,17 @@ const insertProduct = () => {
     titleProduct: $nameProduct.value,
     priceProduct: $priceProduct.value,
   };
-  listProduct.push(addNewProduct)
+  listProduct.push(addNewProduct);
 };
 
 $formSubmit.addEventListener("submit", function (event) {
   event.preventDefault();
-  insertProduct()
+  insertProduct();
+  createStructure();
 });
 
 const createStructure = () => {
+  $sectionSales.innerHTML = "";
   const wrapperTitle = document.createElement("div");
   wrapperTitle.classList.add("wrapper-title-sales");
   $sectionSales.appendChild(wrapperTitle);
