@@ -1,27 +1,24 @@
 import listProduct from "./mocks/index.js";
 const $sectionSales = document.querySelector(".sales");
-const $btnSubmit = document.querySelector(".btn-submit");
+const $formSubmit = document.querySelector(".form-insert-product");
 const $inputID = document.querySelector("#id-product");
 const $imageProduct = document.querySelector("#id-image");
-const $nameProduct = document.querySelector("#id-name")
-const $priceProduct = document.querySelector("#id-price")
+const $nameProduct = document.querySelector("#id-name");
+const $priceProduct = document.querySelector("#id-price");
 
-const insertProduct = (event) => {
-  
-};
-
-
-
-$btnSubmit.addEventListener("submit", function (event) {
-  event.preventDefault();
-
+const insertProduct = () => {
   const addNewProduct = {
     idProduct: $inputID.value,
     imageProduct: $imageProduct.value,
     titleProduct: $nameProduct.value,
-    priceProduct: $priceProduct.value
+    priceProduct: $priceProduct.value,
   };
-  console.log('entrei')
+  listProduct.push(addNewProduct)
+};
+
+$formSubmit.addEventListener("submit", function (event) {
+  event.preventDefault();
+  insertProduct()
 });
 
 const createStructure = () => {
