@@ -6,21 +6,11 @@ const $imageProduct = document.querySelector("#id-image");
 const $nameProduct = document.querySelector("#id-name");
 const $priceProduct = document.querySelector("#id-price");
 
-const insertProduct = () => {
-  const addNewProduct = {
-    idProduct: $inputID.value,
-    imageProduct: $imageProduct.value,
-    titleProduct: $nameProduct.value,
-    priceProduct: $priceProduct.value,
-  };
-  listProduct.push(addNewProduct);
+const getProduct = (classSuper) => {
+  for (const product of listProduct) {
+    printProduct(product, classSuper);
+  }
 };
-
-$formSubmit.addEventListener("submit", function (event) {
-  event.preventDefault();
-  insertProduct();
-  createStructure();
-});
 
 const createStructure = () => {
   $sectionSales.innerHTML = "";
@@ -88,10 +78,28 @@ const printProduct = (product, classSuper) => {
   wrapperIcon.appendChild(iconFavorite);
 };
 
-const getProduct = (classSuper) => {
-  for (const product of listProduct) {
-    printProduct(product, classSuper);
-  }
+$formSubmit.addEventListener("submit", function (event) {
+  event.preventDefault();
+  insertProduct();
+  cleanForm();
+  createStructure();
+});
+
+const insertProduct = () => {
+  const addNewProduct = {
+    idProduct: $inputID.value,
+    imageProduct: $imageProduct.value,
+    titleProduct: $nameProduct.value,
+    priceProduct: $priceProduct.value,
+  };
+  listProduct.push(addNewProduct);
+};
+
+const cleanForm = () => {
+  $inputID.value = "";
+  $imageProduct.value = "";
+  $nameProduct.value = "";
+  $priceProduct.value = "";
 };
 
 createStructure();
