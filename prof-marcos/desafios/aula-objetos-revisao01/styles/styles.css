@@ -69,6 +69,7 @@
   flex-direction: column;
   width: 100%;
   height: 70%;
+  margin-bottom: 20px;
 }
 
 .wrapper-title-sales {
@@ -173,7 +174,7 @@
   transition: 600ms;
 }
 
-.new-products{
+.insert-products{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,6 +187,7 @@
   display: flex;
   flex-direction: column;
   width: 80%;
+  margin-bottom: 20px;
 }
 
 .new-product-title {
@@ -199,4 +201,47 @@
   border-width: 0px;
   background-color: #666666;
   width: 100%;
+}
+
+.wrapper-panel-insert{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+}
+
+.form-title{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+.form-insert-product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
+}
+
+.input{
+  font-size: 1rem;
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  border: 1px solid #666666;
+  color: #666666;
+  padding-left: 1rem;
+}
+
+.btn-submit{
+  font-weight: bold;
+  color: #12b812;
+  width: 50%;
+  height: 2rem;
+}
+
+.label{
+  color: #e21836;
 }
