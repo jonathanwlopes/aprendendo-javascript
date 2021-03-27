@@ -110,33 +110,32 @@
   color: #b30404c9;
 }
 
-.edit-information{
+.edit-information {
   color: #ffffff;
   background-color: #f81c32cc;
   font-size: 15px;
   border: none;
   padding: 0.5rem;
   margin-bottom: 1rem;
-
 }
 
-.edit-information:hover{
+.edit-information:hover {
   background-color: #dc3545;
   transition: 300ms;
 }
 
-.box-search{
+.box-search {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
 }
 
-.label{
+.label {
   font-weight: bold;
 }
 
-.input{
+.input {
   width: 60%;
   outline: none;
   font-size: 0.8rem;
@@ -149,11 +148,11 @@
   height: 2rem;
 }
 
-.input:hover{
-  border: 1px solid #007bff
+.input:hover {
+  border: 1px solid #007bff;
 }
 
-.input-submit{
+.input-submit {
   font-weight: bold;
   padding-left: 0.3rem;
   width: 20%;

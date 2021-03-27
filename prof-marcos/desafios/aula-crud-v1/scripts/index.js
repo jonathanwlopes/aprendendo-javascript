@@ -6,9 +6,9 @@ const $valueCnh = document.querySelector("#value-cnh");
 
 const createStructure = () => {
   const result = searchDriver($valueCnh.value);
-  if (result === undefined){
-    alert('Motorista não cadastrado')
-    return location = "index.html"
+  if (result === undefined) {
+    alert("Motorista não cadastrado");
+    return (location = "index.html");
   }
 
   const boxInformation = document.createElement("div");
@@ -101,8 +101,6 @@ const createStructure = () => {
     location = "index.html";
   });
 };
-
-
 
 const searchDriver = (param) => {
   param = Number(param);
