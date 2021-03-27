@@ -9,6 +9,15 @@ const listDrivers = {
       ratings: 4.5,
       aceptRate: 80,
       cancelRate: 7,
+      trips: 5.635,
+      years: 4,
+      active: (param) =>{
+        if(param == 'ativo'){
+          return 'ativo'
+        } else{
+          return 'desativado'
+        }
+      }
     },
 
     {

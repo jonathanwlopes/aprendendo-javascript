@@ -93,7 +93,7 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .total-trips {
@@ -113,10 +113,10 @@
 .edit-information{
   color: #ffffff;
   background-color: #f81c32cc;
-
   font-size: 15px;
   border: none;
   padding: 0.5rem;
+  margin-bottom: 1rem;
 
 }
 
