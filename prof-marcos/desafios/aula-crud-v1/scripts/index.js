@@ -6,6 +6,10 @@ const $valueCnh = document.querySelector("#value-cnh");
 
 const createStructure = () => {
   const result = searchDriver($valueCnh.value);
+  if (result === undefined){
+    alert('Motorista não cadastrado')
+    return location = "index.html"
+  }
 
   const boxInformation = document.createElement("div");
   boxInformation.classList.add("box-information");
@@ -82,9 +86,7 @@ const createStructure = () => {
 
   const infoDescription = document.createElement("p");
   infoDescription.classList.add("info-description");
-  infoDescription.innerHTML = `Motorista esta <span class="text-active">${result.active(
-    "ativo"
-  )}</span> na plataforma`;
+  infoDescription.innerHTML = `Motorista esta <span class="text-active">${result.active}</span>.`;
   boxTrips.appendChild(infoDescription);
 
   const boxSearch = document.createElement("div");
@@ -99,6 +101,8 @@ const createStructure = () => {
     location = "index.html";
   });
 };
+
+
 
 const searchDriver = (param) => {
   param = Number(param);

@@ -114,3 +114,139 @@ let myArray = newText.split(" ")
 console.log(myArray)
 let convertArrayToText = myArray.join(" ")
 console.log(convertArrayToText)
+
+// Criando Arrays com contructor
+let myArray = new Array('a', 'b', 'c')
+console.log(myArray)
+
+// transoformar cadeia de caracteres dentro do array
+let word = "manipulação"
+myArray = Array.from(word)
+console.log(myArray.length)
+
+// Manipulando Arrays
+let techs = ["html", "css", 'js']
+//adicionar item ao fim
+techs.push("nodejs")
+console.log(techs)
+//adicionar ao começo
+techs.unshift('sql')
+// remover do fim
+techs.pop()
+//remover do incio
+techs.shift()
+
+console.log(techs)
+
+//pegar somente alguns elementos como retorno da função
+console.log(techs.slice(1,3))
+
+// romover um ou mais itens em qualquer posição do array
+techs.splice(1,2)
+console.log(techs)
+techs.push("react")
+//encontrar a posição de um elemento no array
+let index = techs.indexOf("react")
+console.log(index) // encontrei o elemento
+techs.splice(index, 1) // objeto encontrado foi colocado na variavel index e removido com o splice
+console.log(techs)
+
+//Revisão metodo join e split
+let myText = 'Este é meu texto'
+myArray = myText.split(" ")
+console.log(myArray)
+myArray.push('com', 'hunderscore')
+myArray.unshift('Olha')
+newText = myArray.join("_")
+console.log(newText.toLocaleLowerCase())
+
+// Revisão função contrutora
+// Aprendizado, a função contrutora não pode ser um arrow function
+function typeFragrance() {
+    this.entrada = 'alecrim',
+    this.saida = 'citrus'
+}
+let perfumes = new typeFragrance()
+console.log(perfumes.entrada)
+
+// Revisão manipulando arrays
+myArray = []
+myArray.push('a','b','c')
+console.log(myArray)
+myArray.unshift(1,2,3)
+console.log(myArray)
+myArray.splice(3)
+console.log(myArray)
+let findArray = myArray.indexOf(2)
+console.log(findArray)
+myArray[1] = 'Encontrei'
+console.log(myArray[1])
+
+// Expressões e Operadores
+let fristName = new String('Jonathan') // foi criado um objeto
+console.log(fristName) 
+fristName.lastName  = 'Willian'
+console.log(fristName.lastName)
+
+let date = new Date('2021-03-21')
+console.log(date)
+console.log(date.__proto__)
+
+const person = {
+    lastName: 'Jonathan',
+    age: '20'
+}
+
+console.log(person)
+delete person.age
+console.log(person)
+
+// Operadores aritimeticos
+// Resto da divisão
+let remainder
+remainder = 11 % 7
+console.log(remainder)
+
+// incremento ++
+let increment = 0
+console.log(increment++) // o incremento acontece apos passar pela linha
+console.log(increment++)
+
+// exponencial
+console.log(2 ** 2)
+
+// Grouping operator
+let total = (2 + 3) * 5
+console.log(total)
+
+// Operadores de comparação, comparar valores e retornar um boolean
+let one = 1
+let two = 2
+
+console.log(one == 1)
+console.log(one != 2)
+console.log(one === 1) // estritamente igual
+console.log(one !== 2)
+console.log(one > 2)
+console.log(one < two)
+console.log(one >= 1)
+console.log(one <= one)
+
+//Operadores de atribuição
+let x
+x = 1
+x = x+2
+console.log(x*=2)
+
+//Operadores logicos
+let pao = true
+let queijo = false
+
+//AND &&
+console.log(pao && queijo)
+
+//OR||
+console.log(pao || queijo)
+
+// NOT !
+console.log(!pao)
