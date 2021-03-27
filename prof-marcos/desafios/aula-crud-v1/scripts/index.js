@@ -62,28 +62,42 @@ const createStructure = () => {
   >`;
   wrapperIcons.appendChild(aceptRate);
 
-  const cancelRate = document.createElement('span')
-  cancelRate.classList.add('rate-cancel')
-  cancelRate.innerHTML = `${result.cancelRate}% <i class="fas fa-slash"></i>`
-  wrapperIcons.appendChild(cancelRate)
+  const cancelRate = document.createElement("span");
+  cancelRate.classList.add("rate-cancel");
+  cancelRate.innerHTML = `${result.cancelRate}% <i class="fas fa-slash"></i>`;
+  wrapperIcons.appendChild(cancelRate);
 
   const lineSeparatorTwo = document.createElement("hr");
   lineSeparatorTwo.classList.add("dividing-line");
-  boxRating.appendChild(lineSeparatorTwo)
+  boxRating.appendChild(lineSeparatorTwo);
 
-  const boxTrips = document.createElement('div')
-  boxTrips.classList.add('box-trips')
-  boxInformation.appendChild(boxTrips)
+  const boxTrips = document.createElement("div");
+  boxTrips.classList.add("box-trips");
+  boxInformation.appendChild(boxTrips);
 
-  const totalTrips = document.createElement('span')
-  totalTrips.classList.add('total-trips')
-  totalTrips.innerHTML = `${result.trips} viagens em ${result.years} anos`
-  boxTrips.appendChild(totalTrips)
+  const totalTrips = document.createElement("span");
+  totalTrips.classList.add("total-trips");
+  totalTrips.innerHTML = `${result.trips} viagens em ${result.years} anos`;
+  boxTrips.appendChild(totalTrips);
 
-  const infoDescription = document.createElement('p')
-  infoDescription.classList.add('info-description')
-  infoDescription.innerHTML = `Motorista esta <span class="text-active">${result.active('ativo')}</span> na plataforma`
-  boxTrips.appendChild(infoDescription)
+  const infoDescription = document.createElement("p");
+  infoDescription.classList.add("info-description");
+  infoDescription.innerHTML = `Motorista esta <span class="text-active">${result.active(
+    "ativo"
+  )}</span> na plataforma`;
+  boxTrips.appendChild(infoDescription);
+
+  const boxSearch = document.createElement("div");
+  boxSearch.classList.add("box-search");
+  boxInformation.appendChild(boxSearch);
+
+  const editInformation = document.createElement("button");
+  editInformation.classList.add("edit-information");
+  editInformation.textContent = "PESQUISAR OUTRO MOTORISTA";
+  boxSearch.appendChild(editInformation);
+  editInformation.addEventListener("click", function () {
+    location = "index.html";
+  });
 };
 
 const searchDriver = (param) => {
