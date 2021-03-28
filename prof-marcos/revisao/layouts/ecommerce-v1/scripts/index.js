@@ -11,8 +11,6 @@ $next.addEventListener("click", () => {
     activeDisplay();
 });
 
-console.log($box2.classList.contains("active"));
-
 const activeDisplay = () => {
     const active = $box2.classList.contains("inactive");
     if (active === true) {
