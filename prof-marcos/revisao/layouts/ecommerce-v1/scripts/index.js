@@ -251,7 +251,13 @@ const createBanners = () => {
     $container.appendChild(sectionBanners)
 
     const boxBanners = document.createElement('div')
-        // boxBanners.
+    boxBanners.classList.add('box-banners')
+    sectionBanners.appendChild(boxBanners)
+
+    const imgBanner = document.querySelector('img')
+    imgBanner.classList.add('img-banner')
+    imgBanner.src = "https://blueskytechmage.com/ayo/media/banner9-1.jpg"
+    boxBanners.appendChild(imgBanner)
 
 }
 
