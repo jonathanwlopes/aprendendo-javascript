@@ -50,11 +50,11 @@ const createStructureHeader = () => {
     wrapperHeader.classList.add("wrapper-header-menu");
     $header.appendChild(wrapperHeader);
 
-    const headerLogo = document.createElement("img");
-    headerLogo.classList.add("header-logo");
-    headerLogo.src =
-        "https://blueskytechmage.com/ayo/media/logo/stores/32/logo-organix.png";
+    const headerLogo = document.createElement('img');
+    headerLogo.classList.add('header-logo')
+    headerLogo.src = "https://blueskytechmage.com/ayo/media/logo/stores/32/logo-organix.png"
     wrapperHeader.appendChild(headerLogo);
+
 
     const navMenu = document.createElement("nav");
     navMenu.classList.add("nav-menu");
@@ -254,7 +254,7 @@ const createBanners = () => {
     boxBanners.classList.add('box-banners')
     sectionBanners.appendChild(boxBanners)
 
-    const imgBanner = document.querySelector('img')
+    const imgBanner = document.createElement('img')
     imgBanner.classList.add('img-banner')
     imgBanner.src = "https://blueskytechmage.com/ayo/media/banner9-1.jpg"
     boxBanners.appendChild(imgBanner)
