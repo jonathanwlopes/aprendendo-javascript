@@ -1,36 +1,32 @@
 import crud from "./mocks/crud.js";
 
 const inserts = {
-  insertImages: (master,image) => {
-
-
-    const findImages = crud.read('dataImages').find((search) => {
+  insertImages: (master, image) => {
+    const findImages = crud.read("dataImages").find((search) => {
       if (search.imageType === image) {
-        master.src = search.link
-        return true
-      } else{
-        console.log(search)
-        console.log('não encontrado')
-        return false
+        master.src = search.link;
+        return true;
+      } else {
+        return false;
       }
-    })
-    return findImages
+    });
+    return findImages;
   },
 
-  insertTextContent: (master,text) => {
-
-    const findText = crud.read('dataTitles').find((search)=>{
-      if(search.titleType === text){
-      master.textContent = search.title
-        return true
-      }else{
-        master.textContent = 'Texto requerido não encontrado, consulte administrador.'
-        console.error('Texto não encontrado, consulte database e parâmetros.')
-        return false
+  insertTextContent: (master, text) => {
+    const findText = crud.read("dataTitles").find((search) => {
+      if (search.titleType === text) {
+        master.textContent = search.title;
+        return true;
+      } else {
+        master.textContent =
+          "Texto requerido não encontrado, consulte administrador.";
+        console.error("Texto não encontrado, consulte database e parâmetros.");
+        return false;
       }
-    })
-    return findText
-  }
-}
+    });
+    return findText;
+  },
+};
 
-export default inserts
+export default inserts;

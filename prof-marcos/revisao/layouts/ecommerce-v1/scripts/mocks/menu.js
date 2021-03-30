@@ -6,4 +6,13 @@ const listMenuHeader = [
   "Lista de Compras",
 ];
 
-export default listMenuHeader
+const addListMenu = (master) => {
+  for (const item of listMenuHeader) {
+    const listItem = document.createElement("li");
+    listItem.classList.add("list-item");
+    listItem.textContent = item.toUpperCase();
+    master.appendChild(listItem);
+  }
+};
+
+export default {addListMenu};

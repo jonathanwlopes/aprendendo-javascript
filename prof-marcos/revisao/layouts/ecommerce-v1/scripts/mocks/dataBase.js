@@ -33,6 +33,10 @@ const dataImages = {
       link: "./image/star.png",
     },
     {
+      imageType: "Shipped",
+      link: "./image/shipped.png"
+    },
+    {
       imageType: "Carrinho",
       link: "./image/shopping-cart.png",
     },
@@ -42,23 +46,11 @@ const dataImages = {
         "https://blueskytechmage.com/ayo/media/slidebanner/s/l/slider-home9-2.jpg",
     },
     {
-      imageType: 'Banner',
-      link: 'https://blueskytechmage.com/ayo/media/banner9-1.jpg'
-    }
+      imageType: "Banner",
+      link: "https://blueskytechmage.com/ayo/media/banner9-1.jpg",
+    },
   ],
 };
-
-// {
-//   logo:
-//     "https://blueskytechmage.com/ayo/media/logo/stores/32/logo-organix.png",
-//   slide01:
-//     "https://blueskytechmage.com/ayo/media/slidebanner/s/l/slider-home9-2.jpg",
-//   icons: {
-//     comparar: "./image/dollar-tag.png",
-//     favoritos: "./image/star.png",
-//     carrinho: "./image/shopping-cart.png",
-//   },
-// },
 
 const dataProducts = {
   data: [
