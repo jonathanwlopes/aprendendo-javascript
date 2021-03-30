@@ -1,93 +1,7 @@
-import listMenuHeader from "./mocks/menu.js";
-import crud from "./mocks/crud.js";
+import header from './header.js'
+import inserts from './inserts.js'
 
 const $container = document.querySelector(".container");
-
-const createElement = (element, clas, master) => {
-    const newElement = document.createElement(element);
-
-    if(clas != ""){      
-        newElement.classList.add(clas);
-        
-    }
-    master.appendChild(newElement);
-  return newElement;
-};
-
-const createStructureHeader = () => {
-
-  const header = createElement("header", "header", $container); //Exemplo 1 - OK
-
-  const boxTopBar = createElement("div", "box-top-bar", header); // Exemplo 2 - Quebra Código.
-
-
-  const topBarMsg = createElement("p", "top-bar-msg", boxTopBar);
-  topBarMsg.textContent = crud.includeMessage().message01;
-
-  const wrapperHeader = createElement("div", "wrapper-header-menu", header);
-
-  const headerLogo = createElement("img", "header-logo", wrapperHeader);
-  headerLogo.src =  "https://blueskytechmage.com/ayo/media/logo/stores/32/logo-organix.png";
-
-
-  const navMenu = createElement("nav", "nav-menu", wrapperHeader);
-
-  const listMenu = createElement("ul", "list-menu", navMenu);
-  for (const item of listMenuHeader) {
-    const listItem = document.createElement("li");
-    listItem.classList.add("list-item");
-    listItem.textContent = item.toUpperCase();
-    listMenu.appendChild(listItem);
-  }
-
-  const wrapperSearch = createElement("div", "wrapper-header-search", header);
-
-  const listProduct = createElement("div", "list-product", wrapperSearch);
-
-  const iconListProduct = createElement("i", "fas-color", listProduct);
-  iconListProduct.classList.add("fas", "fa-bars", "fa-lg");
-
-  const titleListProduct = createElement("h3", "title-product", listProduct);
-  titleListProduct.textContent = "PRODUTOS";
-
-  const wrapperInputSearch = createElement(
-    "div",
-    "wrapper-input-search",
-    wrapperSearch
-  );
-
-  const btnCategory = createElement(
-    "button",
-    "btn-category",
-    wrapperInputSearch
-  );
-  btnCategory.textContent = "Categorias";
-
-  const searchProduct = createElement(
-    "input",
-    "search-product",
-    wrapperInputSearch
-  );
-  searchProduct.type = "text";
-  searchProduct.placeholder = "Digite o nome do produto";
-
-  const btnBuscar = createElement("button", "btn-search", wrapperInputSearch);
-  btnBuscar.textContent = "BUSCAR";
-
-  const wrapperIcons = createElement("div", "wrapper-icons", wrapperSearch);
-
-    const linkComparar = createElement('a', '', wrapperIcons)
-    const imgComprar = createElement('img', 'img-cart', linkComparar)
-    imgComprar.src = "./image/dollar-tag.png"
-
-  const linkFavoritos = document.createElement("a");
-  linkFavoritos.innerHTML = `<img class="img-cart" title="Favoritos" src="image/star.png" />`;
-  wrapperIcons.appendChild(linkFavoritos);
-
-  const linkCarrinho = document.createElement("a");
-  linkCarrinho.innerHTML = `<img class="img-cart" title="Carrinho" src="image/shopping-cart.png" />`;
-  wrapperIcons.appendChild(linkCarrinho);
-};
 
 const createStructureSlideBar = () => {
   const sectionSlide = document.createElement("section");
@@ -96,8 +10,7 @@ const createStructureSlideBar = () => {
 
   const imgSlide01 = document.createElement("img");
   imgSlide01.classList.add("img-slide");
-  imgSlide01.src =
-    "https://blueskytechmage.com/ayo/media/slidebanner/s/l/slider-home9-2.jpg";
+  inserts.insertImages(imgSlide01,'Slide01')
   sectionSlide.appendChild(imgSlide01);
 };
 
@@ -116,7 +29,7 @@ const createStructureBenefits = () => {
 
   const imgBenefits = document.createElement("img");
   imgBenefits.classList.add("img-benefits");
-  imgBenefits.src = "./image/shipped.png";
+  inserts.insertImages(imgBenefits,'Shipped')
   wrapperBoxBenefits.appendChild(imgBenefits);
 
   const wrapperInfoBenefits = document.createElement("div");
@@ -220,11 +133,11 @@ const createBanners = () => {
 
   const imgBanner = document.createElement("img");
   imgBanner.classList.add("img-banner");
-  imgBanner.src = "https://blueskytechmage.com/ayo/media/banner9-1.jpg";
+  inserts.insertImages(imgBanner,'Banner')
   boxBanners.appendChild(imgBanner);
 };
 
-createStructureHeader();
+header.createStructureHeader();
 createStructureSlideBar();
 createStructureBenefits();
 createNewArrivals();

@@ -4,21 +4,27 @@ const crud = {
   create: () => {},
 
   read: (dataBase) => {
-    if (dataBase === "infoProducts") {
-      dataBase = module.infoProducts;
-      return dataBase
-    } else if (dataBase === 'pageTitles') {
-      dataBase = module.pageTitles;
-      return dataBase
+    if (dataBase === "dataTitles") {
+      return module.dataTitles.data;
+    } else if (dataBase === "dataImages") {
+      return module.dataImages.data;
+    } else if (dataBase === "dataProducts") {
+      return module.dataProducts.data;
     } else {
-      return 'Database não localizada.'
+      return console.error("Data base não localizada");
     }
   },
 
-  includeMessage: ()=> {
-    return module.pageTitles.data
-  }
+  readMessageById: (master, id) => {
+    const findMessage = module.dataTitles.data.find(function (search) {
+      if (search.id === id) {
+        return (master.textContent = search.message);
+      } else {
+        return false;
+      }
+    });
+    return findMessage;
+  },
 };
-
 
 export default crud;
