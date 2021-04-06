@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-forms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 80%;
+  border: 2rem solid #597df5;
+}
+
+.panel {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-title {
+  width: 80%;
+  height: 30%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.frist-name-text {
+  width: 30%;
+}
+
+.signup {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  color: #a5a4a4;
+  margin-bottom: 1rem;
+}
+
+.frist-name {
+  margin-bottom: 0.5rem;
+}
+
+.last-name {
+  margin-bottom: 0.5rem;
+}
+.email-address {
+  margin-bottom: 0.5rem;
+}
+.password {
+  margin-bottom: 0.5rem;
+}
+
+.confirm-password {
+  margin-bottom: 0.5rem;
+}
+
+.submit {
+  margin-bottom: 1rem;
+}
+
+.msg-success{
+  display: none;
+}
+
+.active{
+  display: block;
+}

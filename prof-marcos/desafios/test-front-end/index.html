@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Test Front End</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="section-forms">
+        <div class="panel">
+          <div class="wrapper-title">
+            <h3 class="signup">Sign Up</h3>
+            <h4 class="sub-title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              repudiandae labore veritatis nam earum? Fugiat at necessitatibus
+              modi consequuntur earum deleniti, est, eum sapiente reprehenderit
+              harum alias sed eius repudiandae.
+            </h4>
+          </div>
+          <form class="form">
+            <label class="frist-name-text" for="frist-name">Frist Name:</label>
+            <input
+              class="frist-name"
+              id="frist-name"
+              autocomplete="off"
+              placeholder="Type your name"
+              required
+            />
+            <label class="last-name-text" for="last-name">Last Name: </label>
+            <input
+              class="last-name"
+              id="last-name"
+              autocomplete="off"
+              placeholder="Type your last name"
+              required
+            />
+            <label class="email-address-text" for="email-address"
+              >Email Address:
+            </label>
+            <input
+              class="email-address"
+              id="email-address"
+              type="email"
+              autocomplete="off"
+              placeholder="Type your email"
+              required
+            />
+            <label class="password-text" for="password"
+              >Password:
+            </label>
+            <input class="password" id="password" autocomplete="off" placeholder="Type your password"  required />
+            
+            <label class="password-text" for="confirm-password"
+              >Confirm password:
+            </label>
+            <input
+              class="confirm-password"
+              id="confirm-password"
+              autocomplete="off"
+              placeholder="Type your password"
+              required
+            />
+            <input disabled class="submit" type="submit" value="Send">
+          </form>
+        </div>
+        <div class="msg-success">
+          <h1>Enviado com sucesso!</h1>
+        </div>
+      </section>
+    </main>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
